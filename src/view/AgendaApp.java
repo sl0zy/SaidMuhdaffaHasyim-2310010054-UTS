@@ -80,7 +80,7 @@ public class AgendaApp extends javax.swing.JFrame {
      * Setup table model dan properties
      */
     private void setupTable() {
-        // Define columns (sesuai dengan kebutuhan tanpa lokasi & kategori)
+        // Define columns
         String[] columns = {"ID", "Judul", "Tanggal", "Waktu", "Prioritas"};
         
         // Create table model (read-only)
