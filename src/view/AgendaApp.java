@@ -96,10 +96,10 @@ public class AgendaApp extends javax.swing.JFrame {
         
         // Set column widths
         tblAgenda.getColumnModel().getColumn(0).setPreferredWidth(50);   // ID
-        tblAgenda.getColumnModel().getColumn(1).setPreferredWidth(200);  // Judul
-        tblAgenda.getColumnModel().getColumn(2).setPreferredWidth(100);  // Tanggal
-        tblAgenda.getColumnModel().getColumn(3).setPreferredWidth(80);   // Waktu
-        tblAgenda.getColumnModel().getColumn(4).setPreferredWidth(100);  // Prioritas
+        tblAgenda.getColumnModel().getColumn(1).setPreferredWidth(300);  // Judul
+        tblAgenda.getColumnModel().getColumn(2).setPreferredWidth(80);  // Tanggal
+        tblAgenda.getColumnModel().getColumn(3).setPreferredWidth(50);   // Waktu
+        tblAgenda.getColumnModel().getColumn(4).setPreferredWidth(80);  // Prioritas
         
         // Hide ID column (tetap ada tapi tidak ditampilkan)
         tblAgenda.getColumnModel().getColumn(0).setMinWidth(0);
@@ -644,7 +644,8 @@ public class AgendaApp extends javax.swing.JFrame {
         spinnerWaktu = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Aplikasi Agenda Pribadi");
+        setTitle("Aplikasi Agenda Pribadi / 2310010054 - Said Muhdaffa Hasyim");
+        setAlwaysOnTop(true);
         setBackground(new java.awt.Color(244, 247, 252));
         setResizable(false);
 
@@ -872,17 +873,17 @@ public class AgendaApp extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(446, 446, 446)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(384, 384, 384)
-                        .addComponent(lblTitle)))
+                .addGap(31, 31, 31)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(28, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lblTitle)
+                .addGap(393, 393, 393))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(453, 453, 453))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
