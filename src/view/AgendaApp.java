@@ -69,9 +69,10 @@ public class AgendaApp extends javax.swing.JFrame {
         // Load initial data
         loadAllAgenda();
         
-        // Disable edit/hapus button initially
+        // Disable edit/hapus button initially dan setDate
         btnEdit.setEnabled(false);
         btnHapus.setEnabled(false);
+        dateChooser.setDate(new Date());
     }
     
     // ========== SETUP METHODS ==========
