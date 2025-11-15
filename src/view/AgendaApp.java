@@ -294,7 +294,6 @@ public class AgendaApp extends javax.swing.JFrame {
     /**
      * Perform search and filter (Real-time)
      * Method utama untuk pencarian dan filtering
-     * Diperbaiki: Search dan Filter bisa bekerja independen atau bersamaan
      */
     private void performSearch() {
         // Get search keyword
@@ -307,6 +306,10 @@ public class AgendaApp extends javax.swing.JFrame {
 
         // Get filter selection
         String selectedPrioritas = (String) cmbFilterPrioritas.getSelectedItem();
+
+        // ========== CLEAR FORM SAAT SEARCH/FILTER ==========
+        // Perbaikan bug: Clear form karena selection akan hilang setelah table di-reload
+        clearFormOnly();
 
         // Clear table
         tableModel.setRowCount(0);
@@ -475,6 +478,24 @@ public class AgendaApp extends javax.swing.JFrame {
         loadAllAgenda();
         System.out.println("Form cleared");
     }
+    
+    /**
+     * Bersihkan HANYA form input tanpa reload data atau reset search/filter
+     * Method ini berbeda dengan clearForm() yang juga reset search & filter
+     */
+   private void clearFormOnly() {
+       // Clear form input fields
+       txtJudul.setText("");
+       txtDeskripsi.setText("");
+       dateChooser.setDate(new Date());
+       spinnerWaktu.setValue(new Date());
+       cmbPrioritas.setSelectedIndex(0);
+
+       // Clear selection & disable buttons
+       clearSelection();
+
+       System.out.println("Form fields cleared (search/filter tetap aktif)");
+   }
     
     /**
      * Validasi input form
