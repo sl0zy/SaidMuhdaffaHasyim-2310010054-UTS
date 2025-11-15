@@ -253,7 +253,7 @@
         </Component>
         <Component class="com.toedter.calendar.JDateChooser" name="dateChooser">
           <Properties>
-            <Property name="dateFormatString" type="java.lang.String" value="d MMMM yyyy"/>
+            <Property name="dateFormatString" type="java.lang.String" value="EEEE, d MMMM yyyy"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblWaktu">

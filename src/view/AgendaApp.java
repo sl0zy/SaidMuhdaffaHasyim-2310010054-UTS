@@ -672,7 +672,7 @@ public class AgendaApp extends javax.swing.JFrame {
         lblTanggal.setForeground(new java.awt.Color(85, 85, 85));
         lblTanggal.setText("Tanggal:");
 
-        dateChooser.setDateFormatString("d MMMM yyyy");
+        dateChooser.setDateFormatString("EEEE, d MMMM yyyy");
 
         lblWaktu.setForeground(new java.awt.Color(85, 85, 85));
         lblWaktu.setText("Waktu:");
@@ -1116,6 +1116,9 @@ public class AgendaApp extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        // ========== SET LOKALISASI KE INDONESIA ==========
+        // Baris ini akan mengubah JDateChooser, JOptionPane, dll. ke Bahasa Indonesia
+        java.util.Locale.setDefault(new java.util.Locale("in", "ID"));
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
