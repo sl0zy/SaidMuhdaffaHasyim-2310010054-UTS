@@ -619,7 +619,7 @@ public class AgendaApp extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         lblTitle = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1 = new view.components.RoundedPanel(30);
         lblJudul = new javax.swing.JLabel();
         txtJudul = new javax.swing.JTextField();
         lblDeskripsi = new javax.swing.JLabel();
@@ -874,15 +874,15 @@ public class AgendaApp extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
+                        .addGap(31, 31, 31)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(394, 394, 394)
-                        .addComponent(lblTitle))
+                        .addGap(446, 446, 446)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(457, 457, 457)
-                        .addComponent(jLabel1)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                        .addGap(384, 384, 384)
+                        .addComponent(lblTitle)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -891,9 +891,9 @@ public class AgendaApp extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
