@@ -645,17 +645,22 @@ public class AgendaApp extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplikasi Agenda Pribadi");
+        setBackground(new java.awt.Color(244, 247, 252));
         setResizable(false);
 
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("2310010054 - Said Muhdaffa Hasyim");
 
-        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(51, 51, 51));
         lblTitle.setText("Aplikasi Agenda Pribadi");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblJudul.setForeground(new java.awt.Color(85, 85, 85));
         lblJudul.setText("Judul Agenda:");
 
+        lblDeskripsi.setForeground(new java.awt.Color(85, 85, 85));
         lblDeskripsi.setText("Deskripsi Agenda:");
 
         txtDeskripsi.setColumns(20);
@@ -664,38 +669,61 @@ public class AgendaApp extends javax.swing.JFrame {
         txtDeskripsi.setWrapStyleWord(true);
         scrollDeskripsi.setViewportView(txtDeskripsi);
 
+        lblTanggal.setForeground(new java.awt.Color(85, 85, 85));
         lblTanggal.setText("Tanggal:");
 
         dateChooser.setDateFormatString("d MMMM yyyy");
 
+        lblWaktu.setForeground(new java.awt.Color(85, 85, 85));
         lblWaktu.setText("Waktu:");
 
+        lblPrioritas.setForeground(new java.awt.Color(85, 85, 85));
         lblPrioritas.setText("Prioritas:");
 
         cmbPrioritas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Pilih Prioritas -", "Rendah", "Sedang", "Tinggi", "Urgent" }));
 
+        btnEdit.setBackground(new java.awt.Color(243, 156, 18));
+        btnEdit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnEdit.setForeground(new java.awt.Color(255, 255, 255));
         btnEdit.setText("Edit");
+        btnEdit.setBorderPainted(false);
+        btnEdit.setFocusPainted(false);
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditActionPerformed(evt);
             }
         });
 
+        btnBersih.setBackground(new java.awt.Color(149, 165, 166));
+        btnBersih.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBersih.setForeground(new java.awt.Color(255, 255, 255));
         btnBersih.setText("Reset");
+        btnBersih.setBorderPainted(false);
+        btnBersih.setFocusPainted(false);
         btnBersih.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBersihActionPerformed(evt);
             }
         });
 
+        btnHapus.setBackground(new java.awt.Color(231, 76, 60));
+        btnHapus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnHapus.setForeground(new java.awt.Color(255, 255, 255));
         btnHapus.setText("Hapus");
+        btnHapus.setBorderPainted(false);
+        btnHapus.setFocusPainted(false);
         btnHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHapusActionPerformed(evt);
             }
         });
 
+        btnSimpan.setBackground(new java.awt.Color(46, 204, 113));
+        btnSimpan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
         btnSimpan.setText("Simpan");
+        btnSimpan.setBorderPainted(false);
+        btnSimpan.setFocusPainted(false);
         btnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSimpanActionPerformed(evt);
@@ -721,14 +749,24 @@ public class AgendaApp extends javax.swing.JFrame {
 
         cmbFilterPrioritas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Pilih Prioritas -", "Rendah", "Sedang", "Tinggi", "Urgent" }));
 
+        btnExportJSON.setBackground(new java.awt.Color(74, 144, 226));
+        btnExportJSON.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnExportJSON.setForeground(new java.awt.Color(255, 255, 255));
         btnExportJSON.setText("Ekspor ke JSON");
+        btnExportJSON.setBorderPainted(false);
+        btnExportJSON.setFocusPainted(false);
         btnExportJSON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExportJSONActionPerformed(evt);
             }
         });
 
+        btnImportJSON.setBackground(new java.awt.Color(74, 144, 226));
+        btnImportJSON.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnImportJSON.setForeground(new java.awt.Color(255, 255, 255));
         btnImportJSON.setText("Muat JSON");
+        btnImportJSON.setBorderPainted(false);
+        btnImportJSON.setFocusPainted(false);
         btnImportJSON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnImportJSONActionPerformed(evt);
@@ -839,23 +877,23 @@ public class AgendaApp extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(359, 359, 359)
+                        .addGap(394, 394, 394)
                         .addComponent(lblTitle))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(456, 456, 456)
+                        .addGap(457, 457, 457)
                         .addComponent(jLabel1)))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(11, 11, 11)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblTitle)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
